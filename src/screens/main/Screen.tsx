@@ -2,6 +2,8 @@ import React from 'react';
 import {AppTabParamList} from '@/types';
 import {createMaterialBottomTabNavigator} from 'react-native-paper/react-navigation';
 import Index from './pages/Index';
+import Notifications from './pages/Notifications';
+import Usage from './pages/Usage';
 
 const Tab = createMaterialBottomTabNavigator<AppTabParamList>();
 
@@ -16,11 +18,11 @@ function Main() {
       <Tab.Screen
         name="Uso"
         options={{tabBarIcon: 'chart-line'}}
-        children={() => <></>}
+        children={Usage}
       />
       <Tab.Screen
         name="Notificaciones"
-        children={() => <></>}
+        children={Notifications}
         options={{tabBarIcon: 'bell'}}
       />
     </Tab.Navigator>
